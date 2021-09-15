@@ -1,6 +1,6 @@
 {
-    "title": "Creative",
-    "name": "startbootstrap-creative",
+    "title": "Ensino Simples",
+    "name": "Ensino Simples - Tecnologia e Treinamentos",
     "version": "7.0.4",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -23,20 +23,13 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/creative",
+    "homepage": "https://https://ensinosimples.com.br/",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-creative/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://https://ensinosimples.com.br/",
+        "email": "jef.lucas@hotmail.co.uk"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (https://davidmiller.io/)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-creative.git"
-    },
+    "author": "Jeff Dev",
     "dependencies": {
         "bootstrap": "5.1.0"
     },
