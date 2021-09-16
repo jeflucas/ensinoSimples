@@ -41,7 +41,7 @@ html(lang='pt-br')
                     .then(function() {
                         console.log('SUCCESS!')
                         alert("Mensagem enviada com sucesso!")
-                        reload();
+                        window.location.reload();
                     }, function(error) {
                         console.log('FAILED...', error);
                     });});}
