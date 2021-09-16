@@ -28,16 +28,19 @@ html(lang='pt-br')
 
         // Scripts do Formulário
 
-        script(type="text/javascript",src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js",) 
+        script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js",) 
         script(type="text/javascript").
-            (function() {emailjs.init('user_1x15UKuO0LG7GabNt8RCO')})();)
+            (function()
+                {emailjs.init("user_1x15UKuO0LG7GabNt8RCO");
+            })();
         script(type="text/javascript").
             (window.onload = function() {document.getElementById('contact-form').addEventListener('submit', function(event) {event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('contact_service', 'contact_form', this)
+                emailjs.sendForm('service_1aejhq6', 'template_psv2gu6', this)
                     .then(function() {
-                        console.log('SUCCESS!');
+                        console.log('SUCCESS!')
+                        alert("Mensagem enviada com sucesso!");
                     }, function(error) {
                         console.log('FAILED...', error);
                     });});}
@@ -196,7 +199,8 @@ html(lang='pt-br')
                                 input(type="hidden", name="contact_number")
                                 input#user_name.form-control(
                                     type='text',
-                                    placeholder='Como posso te chamar?'
+                                    placeholder='Como posso te chamar?',
+                                    name="user_name"
                                 )
                                 label(for='user_name') Nome: 
 
@@ -205,6 +209,7 @@ html(lang='pt-br')
                                 input#user_email.form-control(
                                     type='email',
                                     placeholder='exemplo@exemplo.com',
+                                    name="user_email"
                                 )
                                 label(for='user_email') Endereço de e-mail:
 
@@ -214,12 +219,13 @@ html(lang='pt-br')
                                     type='text',
                                     placeholder='Escreva sua mensagem aqui, se possível deixe um número de contato',
                                     style='height: 10rem;',
+                                    name="message"
                                 )
                                 label(for='message') Mensagem:
                             
                             // Submit Button
                             .d-grid
-                                button#submitButton.btn.btn-primary.btn-xl.disabled(type='submit') Enviar
+                                button#submitButton.btn.btn-primary.btn-xl(type='submit', value='Send') Enviar
 
         // Footer
         footer.bg-light.py-5
@@ -236,4 +242,4 @@ html(lang='pt-br')
         // Core theme JS
         script(src='js/scripts.js')
 
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
+        //script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
