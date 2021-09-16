@@ -40,7 +40,8 @@ html(lang='pt-br')
                 emailjs.sendForm('service_1aejhq6', 'template_psv2gu6', this)
                     .then(function() {
                         console.log('SUCCESS!')
-                        alert("Mensagem enviada com sucesso!");
+                        alert("Mensagem enviada com sucesso!")
+                        reload();
                     }, function(error) {
                         console.log('FAILED...', error);
                     });});}
