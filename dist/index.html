@@ -17,6 +17,28 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Scripts do Formulário-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {emailjs.init('user_1x15UKuO0LG7GabNt8RCO')})();)
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById('contact-form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = (Math.random() * 100000) | 0;
+                    emailjs.sendForm('contact_service', 'contact_form', this).then(
+                        function () {
+                            console.log('SUCCESS!');
+                        },
+                        function (error) {
+                            console.log('FAILED...', error);
+                        }
+                    );
+                });
+            };
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -29,6 +51,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Tecnologias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
                     </ul>
                 </div>
@@ -160,12 +183,48 @@
                 </div>
             </div>
         </div>
-        <!-- Contact-->
-        <div id="contact"></div>
+        <!-- Agenda-->
+        <div id="agenda"></div>
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Vamos marcar uma conversa rápida?</h2>
                 <a class="btn btn-light btn-xl" href="https://doodle.com/mm/jeffersonlucas/ensino-simples">Acesse a agenda!</a>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Vamos conversar mais?</h2>
+                        <hr class="divider" />
+                        <p class="text-muted mb-5">Pronto para começar a viver sem medo da tecnologia? Preencha o formulário abaixo que entrarei em contato contgo o mais rápido possível!</p>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <form id="contact-form">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input type="hidden" name="contact_number" />
+                                <input class="form-control" id="user_name" type="text" placeholder="Como posso te chamar?" />
+                                <label for="user_name">Nome:</label>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="user_email" type="email" placeholder="exemplo@exemplo.com" />
+                                <label for="user_email">Endereço de e-mail:</label>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Escreva sua mensagem aqui, se possível deixe um número de contato" style="height: 10rem"></textarea>
+                                <label for="message">Mensagem:</label>
+                            </div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button></div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Footer-->
