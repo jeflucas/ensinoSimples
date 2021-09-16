@@ -1,7 +1,7 @@
 /*!
-* Start Bootstrap - Creative v7.0.4 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+* Start Bootstrap - Ensino Simples v7.0.4 (https://https://ensinosimples.com.br/)
+* Copyright 2013-2021 Jeff Dev
+* Licensed under MIT (https://github.com/StartBootstrap/Ensino Simples - Tecnologia e Treinamentos/blob/master/LICENSE)
 */
 //
 // Scripts
