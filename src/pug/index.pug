@@ -26,6 +26,28 @@ html(lang='pt-br')
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
+        // Scripts do Formulário
+
+        script(type="text/javascript",src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js",) 
+        script(type="text/javascript").
+            (function() {emailjs.init('user_1x15UKuO0LG7GabNt8RCO')})();)
+        script(type="text/javascript").
+            (
+                 window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+            )
+
     body#page-top
 
         // Navigation
@@ -42,6 +64,8 @@ html(lang='pt-br')
                             a.nav-link(href='#services') Serviços
                         li.nav-item
                             a.nav-link(href='#portfolio') Tecnologias
+                        li.nav-item
+                            a.nav-link(href='#agenda') Agenda
                         li.nav-item
                             a.nav-link(href='#contact') Contato
 
@@ -152,13 +176,56 @@ html(lang='pt-br')
                                 .project-name
                                     | em Redes Sociais
 
-        // Contact
-        #contact
+        // Agenda
+        #agenda
         section.page-section.bg-dark.text-white
             .container.px-4.px-lg-5.text-center
                 h2.mb-4 Vamos marcar uma conversa rápida?
                 a.btn.btn-light.btn-xl(href='https://doodle.com/mm/jeffersonlucas/ensino-simples') Acesse a agenda!
         
+        // Contact
+        section#contact.page-section
+            .container.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.col-xl-6.text-center
+                        h2.mt-0 Vamos conversar mais?
+                        hr.divider
+                        p.text-muted.mb-5
+                            | Pronto para começar a viver sem medo da tecnologia? Preencha o formulário abaixo que entrarei em contato contgo o mais rápido possível!
+                .row.gx-4.gx-lg-5.justify-content-center.mb-5
+                    .col-lg-6
+                        form#contact-form
+
+                            // Name input
+                            .form-floating.mb-3
+                                input#(type="hidden", name="contact_number")
+                                input#user_name.form-control(
+                                    type='text',
+                                    placeholder='Como posso te chamar?'
+                                )
+                                label(for='user_name') Nome: 
+
+                            // Email address input
+                            .form-floating.mb-3
+                                input#user_email.form-control(
+                                    type='email',
+                                    placeholder='exemplo@exemplo.com',
+                                )
+                                label(for='user_email') Endereço de e-mail:
+
+                            // Message input
+                            .form-floating.mb-3
+                                textarea#message.form-control(
+                                    type='text',
+                                    placeholder='Escreva sua mensagem aqui, se possível deixe um número de contato',
+                                    style='height: 10rem;',
+                                )
+                                label(for='message') Mensagem:
+                            
+                            // Submit Button
+                            .d-grid
+                                button#submitButton.btn.btn-primary.btn-xl.disabled(type='submit') Enviar
+
         // Footer
         footer.bg-light.py-5
             .container.px-4.px-lg-5
