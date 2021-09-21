@@ -43,7 +43,7 @@ html(lang='pt-br')
     body#page-top
 
         // Navigation
-        nav#blogNav.navbar.navbar-expand-lg.navbar-light
+        nav#blogNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
             .container.px-4.px-lg-5
                 a.navbar-brand(href='./index.html') Ensino Simples
                 button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
@@ -55,12 +55,13 @@ html(lang='pt-br')
 
         // Masthead
         header.masthead(style="background-image: url('assets/img/home-bg.jpg')")
-            .container.position-relative.px-4.px-lg-5
-                .row.gx-4.gx-lg-5.justify-content-center
-                    .col-md-10.col-lg-8.col-xl-7
-                        .site-heading
-                            h1 Blog Ensino Simples
-                            span.subheading Informática de maneira simples e direta
+            .container.position-relative.px-4.px-lg-5.h-100
+                .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center.text-center
+                    .col-lg-8.align-self-end
+                        h1.text-white.font-weight-bold Blog Ensino Simples
+                        hr.divider
+                    .col-lg-8.align-self-baseline
+                        span.text-white-75.mb-5 Informática de maneira simples e direta
 
         // Conteúdo Principal
         .container.px-4.px-lg-5
@@ -69,61 +70,20 @@ html(lang='pt-br')
 
                     // Post preview
                     .post-preview
-                        a(href='post.html')
+                        a(href='whatsapp-multi.html')
                             h2.post-title
-                                | Man must explore, and this is exploration at its greatest
+                                | Como testar o novo "multi-device" do WhatsApp
                             h3.post-subtitle
-                                | Problems look mighty small from 150 miles up
+                                | WhatsApp lançou uma versão beta, veja como usar
                         p.post-meta
-                            | Posted by
-                            a(href='#!') Start Bootstrap
-                            | on September 24, 2021
+                            | Escrito por
+                            a(href='#!') Jefferson Lucas
+                            | em 20 de setembro de 2021
 
                     // Divider
                     hr.my-4
 
-                    // Post preview
-                    .post-preview
-                        a(href='post.html')
-                            h2.post-title
-                                | I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        p.post-meta
-                            | Posted by
-                            a(href='#!') Start Bootstrap
-                            | on September 18, 2021
                     
-                    // Divider
-                    hr.my-4
-
-                    // Post preview
-                    .post-preview
-                        a(href='post.html')
-                            h2.post-title
-                                | Science has not yet mastered prophecy
-                            h3.post-subtitle
-                                | We predict too much for the next year and yet far too little for the next ten.
-                        p.post-meta
-                            | Posted by
-                            a(href='#!') Start Bootstrap
-                            | on August 24, 2021
-
-                    // Divider
-                    hr.my-4
-
-                    // Post preview
-                    .post-preview
-                        a(href='post.html')
-                            h2.post-title
-                                | Failure is not an option
-                            h3.post-subtitle
-                                | Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        p.post-meta
-                            | Posted by
-                            a(href='#!') Start Bootstrap
-                            | on July 8, 2021
-                    
-                    // Divider
-                    hr.my-4
         // Footer
         footer.bg-light.py-5
             .container.px-4.px-lg-5
