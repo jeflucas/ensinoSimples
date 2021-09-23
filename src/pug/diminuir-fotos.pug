@@ -1,0 +1,177 @@
+doctype html
+html(lang='pt-br')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Seu Consultor em Inovação e Novas Tecnologias - Domine a tecnologia e utilize os recursos a seu favor! Te mostrarei ferramentas para dominar o mundo digital e te darei insights para facilitar sua vida. Cursos Treinamentos Palestras Tutoriais Ensino Simples')
+        meta(name='author', content='Jeff Dev - jef.lucas at hotmail.co.uk')
+
+        title Blog Ensino Simples
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        // Bootstrap Icons
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet')
+
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic', rel='stylesheet', type='text/css')
+
+        // SimpleLightbox plugin CSS
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css', rel='stylesheet')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+        //Google Analytics
+        script(async, src="https://www.googletagmanager.com/gtag/js?id=G-P5YS0R29N8")
+        script(src="./js/analytics.js") 
+
+        //Google Ads
+        script(async, src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7783884160359352", crossorigin="anonymous")
+    
+        // Font Awesome icons (free version)
+        script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
+
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+    
+    body#page-top
+
+        // Navigation
+        nav#blogNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
+            .container.px-4.px-lg-5
+                a.navbar-brand(href='./index.html') Ensino Simples
+                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.my-2.my-lg-0
+                        li.nav-item
+                            a.nav-link(href='./index.html') Página Principal
+                        li.nav-item
+                            a.nav-link(href='./blog.html') Blog
+
+
+        // Page Header
+        header.masthead.posthead(style="background-image: url('assets/img/blog/post-003-head.jpg')")
+            .container.position-relative.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-md-10.col-lg-8.col-xl-7
+                        .post-heading
+                            h1 Como diminuir o tamanho do arquivo de imagens
+                            h2.subheading Duas formas de diminuir o tamanho de imagens
+                            span.meta
+                                | Escrito por Jefferson Lucas em 22 de setembro de 2021
+                                
+
+        // Post Content
+        article.mb-4
+            .container.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-md-10.col-lg-8.col-xl-7
+                        p
+                            | Você já enfrentou problemas para enviar fotos via e-mail por causa do tamanho do arquivo? Isso é um problema mais comum do que você pode imaginar. Agora vou te mostrar duas formas de contornar esse problema de maneira simples.
+                        
+                        h2.section-heading Forma 1 – Online
+
+                        p
+                            | O site 
+                            a(href='https://tinypng.com/') TinyPNG
+                            | é uma das ferramentas on-line para comprimir imagens. Com essa ferramenta você precisa apenas fazer o upload de suas imagens e o site vai comprimir para você. Simples assim, sem pagar nada! 
+                        p
+                            | E o melhor, você pode comprimir um único arquivo ou várias imagens de uma vez só.
+                        p
+                            | Veja como é simples: 
+
+                        ol 
+                            li 
+                                | Acesse o site 
+                                a(href='https://tinypng.com/') TinyPNG
+                                | em seu navegador preferido.
+
+                            li Quando o site carregar, clique no ícone ao lado do panda simpático.
+
+                            a(href='#!')
+                            img.img-fluid(src='assets/img/blog/post-003-text1.png', alt='...')
+                            span.caption.text-muted
+
+                            li Escolha as fotos que você quer comprimir. Lembre-se que o limite é de 20 fotos por vez.
+
+                            li Quando as fotos estiverem online, o site vai começar a conversão.
+
+                            li Se você subiu uma única foto, clique na palavra “download” ao lado do nome do arquivo.
+
+                            a(href='#!')
+                            img.img-fluid(src='assets/img/blog/post-003-text2.png', alt='...')
+                            span.caption.text-muted
+
+                            li Se você optou por carregar mais de uma foto, clique em “Download All” para baixar um arquivo ZIP contendo todas as fotos comprimidas.
+
+                            a(href='#!')
+                            img.img-fluid(src='assets/img/blog/post-003-text3.png', alt='...')
+                            span.caption.text-muted
+
+                        h2.section-heading Forma 2 – Offline
+
+                        p
+                            | Outra maneira de reduzir o tamanho de suas imagens é mudar a resolução das mesmas, mas isso alterará a qualidade das fotos ATENÇÃO!!
+                        
+                        p
+                            | No Windows 10, existem diversas formas para fazer isso, nesse texto vou mostrar apenas uma.
+                        p
+                            | Em seu computador há um programa que já vem instalado por padrão, o nome dele é Paint, siga os passos abaixo para reduzir o tamanho de suas imagens.
+                        
+                        ol 
+                            li Abra a pasta onde está a imagem que você quer reduzir o tamanho.
+
+                            li Clique com o botão direito do mouse na imagem e selecione o caminho “Abrir com > Paint”
+
+                            a(href='#!')
+                            img.img-fluid(src='assets/img/blog/post-003-text4.png', alt='...')
+                            span.caption.text-muted
+
+                            li Quando a imagem abrir no Paint, selecione a opção “Redimencionar” na parte superior da tela.
+
+                            a(href='#!')
+                            img.img-fluid(src='assets/img/blog/post-003-text5.png', alt='...')
+                            span.caption.text-muted
+
+                            li Na janela “Alongar e Distorcer” que abrir, certifique-se que o campo “porcentagem” está selecionado.
+
+                            a(href='#!')
+                            img.img-fluid(src='assets/img/blog/post-003-text6.png', alt='...')
+                            span.caption.text-muted
+
+                            li Na opção Horizontal substitua o valor “100” por “80” por exemplo, faça o mesmo no valor correspondente à opção Vertical.
+
+                            li Clique em “OK” no final da janela para salvar suas alterações.
+
+                            li Selecione “Arquivo - Salvar como” e escolha entre PNG ou JPEG para salvar sua imagem com o tamanho reduzido.
+
+                            a(href='#!')
+                            img.img-fluid(src='assets/img/blog/post-003-text7.png', alt='...')
+                            span.caption.text-muted
+
+                        
+                        p
+                            | Texto de
+                            a(href='https://www.linkedin.com/in/jlrs/') Jefferson Lucas
+
+        // Footer
+        footer.bg-light.py-5
+            .container.px-4.px-lg-5
+                .small.text-center.text-muted
+                    | Copyright &copy; 2021 - Ensino Simples  | Desenvolvido e Mantido por Jeff Dev
+
+        // Bootstrap core JS
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js')
+
+        // SimpleLightbox plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js')
+
+        // Core theme JS
+        script(src='js/scriptBlog.js')
