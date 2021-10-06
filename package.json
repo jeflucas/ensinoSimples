@@ -1,6 +1,6 @@
 {
     "title": "Ensino Simples",
-    "name": "Ensino Simples - Tecnologia e Treinamentos",
+    "name": "ensino-simples-tecnologia-e-treinamentos",
     "version": "7.0.4",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -12,16 +12,16 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "Creative is a stylish one page HTML theme built with Bootstrap.",
+    "description": "Tecnologia e treinamento.",
     "keywords": [
-        "css",
-        "sass",
-        "scss",
-        "html",
-        "pug",
-        "responsive",
-        "theme",
-        "template"
+        "Tecnologia",
+        "treinamento",
+        "consultoria",
+        "informática",
+        "inovação",
+        "aprendizado",
+        "professor",
+        "Jeff"
     ],
     "homepage": "https://https://ensinosimples.com.br/",
     "bugs": {
